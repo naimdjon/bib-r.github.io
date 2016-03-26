@@ -67,9 +67,12 @@
 			</h2>
 
 			<p id="t42">T42 has been built for benchmarking FRBRization solutions
-				which deal with MARC (UNIMARC & MARC21) records. The dataset is
-				composed by 42 different tests where each relates a specific FRBR
-				pattern representation and can include specific issues. <a href="t42.html"><strong>More details.</strong></a>
+				which deal with MARC records.
+				The dataset is composed by 42 different tests where each relates a specific FRBR
+				pattern representation and can include specific issues. 
+				We provide both records in UNIMARC and MARC21. Every record comes from a real-world library catalog and has been adapted to the tests. Original records have been transformed in several steps, first in an automated way and then with a manual validation.
+
+				<a href="t42.html"><strong>More details.</strong></a>
 				<br/>
 				<a href="https://github.com/bib-r/bib-r/tree/master/t42">Browse the dataset T42 on Github</a>
 			</p>
@@ -77,11 +80,22 @@
 				BIB-RCAT
 			</h2>
 
-			<p id="bibrcat">BIB-RCAT is a dataset of MARC21 records accompanied by the
-				FRBR version to evaluate a FRBRization solution.<br/>
+			<p id="bibrcat">BIB-RCAT is a dataset of MARC21 records accompanied by a
+				FRBR gold version to evaluate a FRBRization solution. The collection is bigger than T42 and records comes from real-world library catalogs.<br/>
 				<a href="https://github.com/bib-r/bib-r/tree/master/bibrcat">Browse the dataset BIB-RCAT on Github</a>
 			</p>
 
+			<h3>
+				Getting Started
+			</h3>
+
+			<p id="gettingstarted">
+				All MARC record are proposed in MARC/XML format. For Java applications, they can be parsed by the MARC4J API. 
+				The FRBR files are provided in RDF/XML format. They have been generated using the Jena API. Thus, 
+				the files can be parsed back by Jena to get the triples as POJOs. 
+				The concepts used in the FRBR gold files use standards vocabularies <a href="http://www.rdaregistry.info/" target="_blank">RDA</a> & <a href="http://iflastandards.info/ns/fr/frbr/frbrer/" target="_blank">FRBRer</a>. We also provide a
+				<a href="https://github.com/bib-r/bib-r/blob/master/mappings.xml" target="_blank">mapping file</a> in RDF/XML where each concept used in the datasets can be mapped to another vocabulary. This file was also generated using the Jena API and can be parsed.
+			</p>
 
 			<h3>
 				Licence
